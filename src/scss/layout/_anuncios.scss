@@ -1,0 +1,67 @@
+@use 'base/mixins' as *;
+@use 'base/variables' as *;
+
+@include tablet {
+    .contenedor-anuncios {
+        @include grid(3, 2rem);
+    }
+}
+
+
+.anuncio {
+    background-color: lighten($gris, 5%);
+    border: 1px solid $gris;
+    margin-bottom: 2rem;
+
+    width: 100%; /* Ancho del 100% del contenedor */
+    height: 100%; /* Alto del 100% del contenedor */
+    //  max-width: none; /* Desactiva el ancho máximo */
+    //  max-height: none; /* Desactiva el alto máximo */
+
+    @include tablet {
+        .img-fijo {
+            width: 40rem; /* Ancho fijo de 200px */
+            height: 40rem; /* Alto fijo de 150px */
+            object-fit: cover; /* Ajusta la imagen para que se ajuste al tamaño fijo */
+        }
+    }
+
+    .contenido-anuncio {
+        padding: 2rem;
+
+        h3 {
+            font-weight: 700;
+            text-transform: uppercase;
+            height: 12rem;
+        }
+    }
+
+    h3, p {
+        margin: 0;
+    }
+}
+
+.precio {
+    color: $verde;
+    font-weight: 700;
+    font-size: 2.4rem;
+}
+
+.descripcion-fija {
+    overflow-y: auto; /* Agrega una barra de desplazamiento vertical si el contenido es mayor que la altura fija */
+    height: 30rem; /* Establece una altura fija de 100px */
+    text-overflow: ellipsis; 
+}
+
+.iconos-nuevos {
+    display: flex;
+    justify-content: space-between;
+
+    .iconos-campo {
+        text-align: center;
+        img {
+            width: 5rem;
+        }
+    }
+}
+

@@ -1,0 +1,29 @@
+@use 'mixins' as *;
+@use 'variables' as *;
+
+.seccion {
+    margin-top: calc($separacion / 2);
+    margin-bottom: calc($separacion / 2);
+}
+.contenido-centrado {
+    max-width: 800px;
+}
+
+.contenido-centrado-form {
+    max-width: 70rem;
+    margin: 0 auto;
+}
+
+.alinear-derecha {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.contenido-usuario {
+    max-width: 50rem;
+    margin: 0 auto 35rem auto;
+}

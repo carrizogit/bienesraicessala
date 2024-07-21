@@ -1,0 +1,47 @@
+@use 'base/variables' as *;
+
+.alerta {
+    padding: .5rem;
+    text-align: center;
+    color: $blanco;
+    font-weight: 700;
+    text-transform: uppercase;
+    width: 60rem;
+    
+
+    &.error {
+        border-left: 5px solid rgb(153, 1, 1);
+        background-color: lighten(rgb(153, 1, 1), 50%);
+        margin: 1rem auto;
+    }
+
+    &.exito {
+        border-left: 5px solid $verde;
+        background-color: lighten($verde, 50%);
+        margin: 1rem auto;
+        color: darken($verde, 10);
+    }
+}
+
+table.propiedades {
+    margin-top: 4rem;
+    width: 100%;
+    border-spacing: 0;
+
+    thead {
+        background-color: $verde;
+
+        th {
+            color: $blanco;
+            padding: 1rem;
+        }
+    }
+
+    .imagen-tabla {
+        width: 10rem;
+    }
+}
+
+.imagen-small {
+    width: 20rem;
+}
